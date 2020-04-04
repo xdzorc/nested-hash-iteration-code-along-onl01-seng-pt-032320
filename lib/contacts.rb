@@ -15,15 +15,19 @@ require 'pry'
   # }
   
 def remove_strawberry(contacts)
- contacts.each do |person, contact_details_hash|
-  if person == "Freddy Mercury"
-    contact_details_hash.each do |attribute, data|
-      if attribute == :favorite_ice_cream_flavors
-        binding.pry
+  contacts.each do |n, a|
+    if n=="Freddy Mercury"
+      a.each do |f, s|
+        if f==favorite_ice_cream_flavors
+          s.each do |haha|
+            haha.delete_if {|x| x=="strawberry"}
+          end
+        end
       end
     end
   end
-end
+    
+    
 end
 
 
